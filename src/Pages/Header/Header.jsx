@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <>
+
         <Navbar bg="light" variant="light">
           <Container>
-            <Navbar.Brand  href="#home">Master Chef USA</Navbar.Brand>
+            <Navbar.Brand>Master Chef USA</Navbar.Brand>
             <Nav className="d-flex justify-content-between">
               <Nav.Link>
                 <Link className='text-decoration-none text-dark' to='/'>Home</Link>
@@ -28,8 +28,6 @@ const Header = () => {
             </Nav>
           </Container>
         </Navbar>
-     
-      </>
     );
 };
 
