@@ -1,9 +1,10 @@
 import React from 'react';
 import { AiFillLike } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
-const ChefCard = ({bio}) => {
-    console.log(bio);
-    const{id,name,experience,numRecipes,picture}=bio;
+const ChefCard = ({chef}) => {
+    console.log(chef);
+    const{id,name,experience,numRecipes,picture}=chef;
    
     return (
         <div className="card bg-base-200 bg-light px-8 py-8" >
@@ -23,7 +24,13 @@ const ChefCard = ({bio}) => {
   
   
 </div>
-              <button className="btn btn-outline-warning">View Recipes</button>
+<Link to={`/chef/${chef.id}`} className='text-black text-decoration-none'>
+                
+              <button className="btn btn-outline-warning">
+              
+                View Recipes
+                </button>
+                </Link>
             </div>
           </div>
         </div>

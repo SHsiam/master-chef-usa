@@ -6,6 +6,7 @@ import restaurant2 from '../../../assets/restaurant2.jpg';
 import pancakes from '../../../assets/pancakes.jpg';
 import ExtraSection from './ExtraSection';
 import Chef from '../Chef/Chef';
+import { Outlet } from 'react-router-dom';
 
 
 const Home = () => {
@@ -52,6 +53,7 @@ const Home = () => {
     </Carousel>
     <Chef></Chef>
   <ExtraSection></ExtraSection>
+ 
     </div>
   );
 };

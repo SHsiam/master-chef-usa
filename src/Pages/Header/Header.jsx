@@ -15,8 +15,10 @@ const Header = () => {
                 <Link className='text-decoration-none text-dark' to='/'>Home</Link>
               </Nav.Link>
               <Nav.Link>
+                
               <Link className='text-decoration-none text-dark' to='/blog'>Blog</Link>
               </Nav.Link>
+            
               <Nav.Link>
               <Link className='text-decoration-none text-dark' to='/profile'>Profile</Link>
               </Nav.Link>

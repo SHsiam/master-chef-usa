@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ChefCard from '../ChefCard/ChefCard';
 
 const Chef = () => {
-    const [chef, setChef] = useState([]);
+    const [chefs, setChef] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/chef')
@@ -13,8 +13,8 @@ const Chef = () => {
     return (
         <div>
             {
-                    chef.map(bio => <ChefCard key={bio.id}
-                    bio={bio}></ChefCard> )
+                    chefs.map(chef => <ChefCard key={chef.id}
+                    chef={chef}></ChefCard> )
                 }
 
             
