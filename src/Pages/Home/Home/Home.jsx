@@ -1,11 +1,16 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import restaurant0 from '../../../assets/restaurant0.jpg'
-import restaurant1 from '../../../assets/restaurant1.jpg'
-import restaurant2 from '../../../assets/restaurant2.jpg'
+import restaurant0 from '../../../assets/restaurant0.jpg';
+import restaurant1 from '../../../assets/restaurant1.jpg';
+import restaurant2 from '../../../assets/restaurant2.jpg';
+import pancakes from '../../../assets/pancakes.jpg';
+import ExtraSection from './ExtraSection';
+import Chef from '../Chef/Chef';
+
 
 const Home = () => {
     return (
+        <div>
         <Carousel>
       <Carousel.Item>
         <img
@@ -45,6 +50,9 @@ const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <Chef></Chef>
+  <ExtraSection></ExtraSection>
+    </div>
   );
 };
 

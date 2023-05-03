@@ -21,7 +21,7 @@ const Header = () => {
               <Link className='text-decoration-none text-dark' to='/profile'>Profile</Link>
               </Nav.Link>
               <Nav.Link>
-              <button class="btn btn-outline-success">
+              <button class="btn btn-outline-warning">
               <Link className='text-decoration-none text-dark' to='/login'>Login</Link>
               </button>
               </Nav.Link>
