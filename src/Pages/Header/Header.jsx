@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  const location = useLocation();
     console.log(user)
     const handleLogout = () => {
         logOut()
@@ -16,13 +17,13 @@ const Header = () => {
   return (
 
     <Navbar bg="light" variant="light">
-      <Container>
-        <Navbar.Brand>
-          <Link className='text-decoration-none text-dark' to='/'>Master Chef USA</Link>
+      <Container >
+        <Navbar.Brand >
+          <Link className='text-decoration-none text-dark'  to='/'>Master Chef USA</Link>
         </Navbar.Brand>
         <Nav className="d-flex justify-content-between">
           <Nav.Link>
-            <Link className='text-decoration-none text-dark' to='/'>Home</Link>
+            <Link className='text-decoration-none text-dark ' to='/'>Home</Link>
           </Nav.Link>
           <Nav.Link>
             
