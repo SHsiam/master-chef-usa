@@ -5,7 +5,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 
 const Login = () => {
-    const { signIn,signInWithGoogle} = useContext(AuthContext);
+    const { signIn,signInWithGoogle,signInWithGithub} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -42,6 +42,18 @@ const Login = () => {
             console.log(error)
         })
     }
+
+    const handleGithubSignIn = () => {
+        signInWithGithub()
+        .then( result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            setUser(loggedUser);
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
     return (
         <Container className='w-25 mx-auto'>
               <h3>Please Login</h3>
@@ -64,9 +76,13 @@ const Login = () => {
                     Don't Have an Account? <Link to="/register">Register</Link>
                 </Form.Text>
             </Form>
-            <button onClick={handleGoogleSignIn} className="btn btn-primary">
+            <div className='d-flex'>
+            <button onClick={handleGoogleSignIn} className="btn btn-primary me-2">
             Google
             </button>
+            <button onClick={handleGithubSignIn} className="btn btn-primary" >Github</button>
+            </div>
+           
         </Container>
     );
 };
