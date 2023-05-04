@@ -3,10 +3,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import restaurant0 from '../../../assets/restaurant0.jpg';
 import restaurant1 from '../../../assets/restaurant1.jpg';
 import restaurant2 from '../../../assets/restaurant2.jpg';
-import pancakes from '../../../assets/pancakes.jpg';
 import ExtraSection from './ExtraSection';
 const Chef = lazy(()=> import ('../Chef/Chef'));
-import { Outlet } from 'react-router-dom';
 
 
 

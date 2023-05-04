@@ -18,8 +18,6 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-     
-
         signIn(email, password)
         .then(result => {
             const loggedUser = result.user;
@@ -77,13 +75,14 @@ const Login = () => {
                 </Form.Text>
             </Form>
             <div className='d-flex'>
-            <button onClick={handleGoogleSignIn} className="btn btn-primary me-2">
+            <button onClick={handleGoogleSignIn} className="btn btn-outline-warning me-2">
             Google
             </button>
-            <button onClick={handleGithubSignIn} className="btn btn-primary" >Github</button>
+            <button onClick={handleGithubSignIn} className="btn btn-outline-warning " >Github</button>
             </div>
-           
         </Container>
+
+        
     );
 };
 
