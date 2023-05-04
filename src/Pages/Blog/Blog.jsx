@@ -1,8 +1,16 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
+import Pdf from "react-to-pdf";
 
+
+const ref = React.createRef();
 const Blog = () => {
     return (
+      <div className='blog'>
+        <Pdf targetRef={ref} filename="blog.pdf" >
+        {({ toPdf }) => <button onClick={toPdf} className="text-yellow-500 fs-5">Generate Pdf</button>}
+      </Pdf>
+      <div ref={ref}>
         <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Tell us the differences between uncontrolled and controlled components.</Accordion.Header>
@@ -29,6 +37,8 @@ const Blog = () => {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+    </div>
+    </div>
     );
 };
 

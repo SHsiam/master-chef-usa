@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {Suspense,lazy} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import restaurant0 from '../../../assets/restaurant0.jpg';
 import restaurant1 from '../../../assets/restaurant1.jpg';
 import restaurant2 from '../../../assets/restaurant2.jpg';
 import pancakes from '../../../assets/pancakes.jpg';
 import ExtraSection from './ExtraSection';
-import Chef from '../Chef/Chef';
+const Chef = lazy(()=> import ('../Chef/Chef'));
 import { Outlet } from 'react-router-dom';
+
 
 
 const Home = () => {
@@ -51,7 +52,9 @@ const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    <Suspense fallback={<h1>Please Wait....</h1>}>
     <Chef></Chef>
+    </Suspense>
   <ExtraSection></ExtraSection>
  
     </div>

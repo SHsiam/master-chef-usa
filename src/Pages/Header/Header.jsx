@@ -35,7 +35,7 @@ const Header = () => {
             {
                     user? <span className='text-primary'>
                       <div className="avatar">
-  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 inline-block w-12 h-12 ">
+  <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 inline-block w-12 h-12 ">
   <img title={user.displayName}
                     src={user?.photoURL}
                     alt=""
