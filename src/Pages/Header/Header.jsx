@@ -17,17 +17,18 @@ const Header = () => {
   return (
 
     <Navbar bg="light" variant="light">
-      <Container >
+      <Container>
         <Navbar.Brand >
-          <Link className='text-decoration-none text-dark' to='/'>Master Chef USA</Link>
+          <Link className='text-decoration-none text-dark' to='/'><small>Master Chef USA</small></Link>
+          
         </Navbar.Brand>
         <Nav className="d-flex justify-content-between">
           <Nav.Link>
-            <Link className='text-decoration-none text-dark ' to='/'>Home</Link>
+            <Link className='text-decoration-none text-dark ' to='/'><small>Home</small> </Link>
           </Nav.Link>
           <Nav.Link>
 
-            <Link className='text-decoration-none text-dark' to='/blog'>Blog</Link>
+            <Link className='text-decoration-none text-dark' to='/blog'><small>Blog</small></Link>
           </Nav.Link>
 
           <Nav.Link>
@@ -35,21 +36,22 @@ const Header = () => {
             {
               user ? <span className='text-primary'>
                 <div className="avatar">
-                  <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 inline-block w-12 h-12 ">
+                  <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 inline-block w-10 h-10 ">
                     <img title={user.displayName}
                       src={user?.photoURL}
                       alt=""
                     />
                   </div>
                 </div>
-                <button onClick={handleLogout}> Log out</button></span> : <Link className='text-decoration-none text-dark' to='#'>Profile</Link>
+                <button onClick={handleLogout}>Logout</button></span> : <Link className='text-decoration-none text-dark' to='#'><small>Profile</small> </Link>
             }
 
           </Nav.Link>
           <Nav.Link>
             <button class="btn btn-outline-warning">
-              <Link className='text-decoration-none text-dark' to='/login'>Login</Link>
+            <Link className='text-decoration-none text-dark' to='/login'><small>Login</small></Link>
             </button>
+            
           </Nav.Link>
         </Nav>
       </Container>
