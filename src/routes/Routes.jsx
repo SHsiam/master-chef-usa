@@ -21,7 +21,7 @@ const router= createBrowserRouter([
            {
             path:'chef/:id',
             element:<PrivateRoute><ViewRecipes></ViewRecipes></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
+            loader:({params})=>fetch(`https://master-chef-usa-server-mdshiam4-gmailcom.vercel.app/chef/${params.id}`)
            },
            {
             path:'blog',

@@ -50,6 +50,7 @@ const Home = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    
     <Suspense fallback={<h1>Please Wait....</h1>}>
     <Chef></Chef>
     </Suspense>
