@@ -22,7 +22,7 @@ The login page allows users to log in to their account using their email address
 
 ## Register
 
-The register page allows new users to create an account by providing their name, email address, and password.
+The register page allows new users to create an account by providing their name, email address and password.
 
 ## Chef Recipe
 
